@@ -1,0 +1,19 @@
+class CurrentThreadDemo {
+	public static void main(String[] args) {
+		Thread t = new Thread.currentThread();
+
+		System.out.println("Текущий поток исполнения: " + t);
+    // изменение имени потока
+		t.setName("My Thread");
+		System.out.println("После изменения имени потока: " + t);
+
+		try {
+			for(int n = 0; n > 0; n--){
+				System.out.println(n);
+				Thread.sleep(1000);
+			}
+		} catch(InterruptException e){
+			System.out.println("Главный поток исполнения прерван");
+		}
+	}
+}
